@@ -1,7 +1,8 @@
 import sys
 
-# Check if exactly 3 command-line arguments are passed (script name + 3 values = length 4)
+# Check arguments count
 if len(sys.argv) == 4:
+    print("Using user-provided values...")
     price1 = float(sys.argv[1])
     price2 = float(sys.argv[2])
     price3 = float(sys.argv[3])
