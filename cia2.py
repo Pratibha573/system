@@ -9,7 +9,7 @@ else:
 
 minimum = min(prices)
 maximum = max(prices)
-average = average(prices) / len(prices)
+average = sum(prices) / len(prices)
 
 print("Minimum price:", minimum)
 print("Maximum price:", maximum)
