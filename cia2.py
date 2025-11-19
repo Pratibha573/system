@@ -1,6 +1,6 @@
 import sys
 
-# Check arguments count
+# Check if exactly 3 command-line arguments are passed (script name + 3 values)
 if len(sys.argv) == 4:
     print("Using user-provided values...")
     price1 = float(sys.argv[1])
@@ -12,13 +12,10 @@ else:
     price2 = 30
     price3 = 20.00
 
-# Calculations
-maximum = max(price1, price2, price3)
 minimum = min(price1, price2, price3)
+maximum = max(price1, price2, price3)
 average = (price1 + price2 + price3) / 3
 
-# Output
-print("Prices:", price1, price2, price3)
-print("Maximum Price =", maximum)
-print("Minimum Price =", minimum)
-print("Average Price =", average)
+print("Minimum price:", minimum)
+print("Maximum price:", maximum)
+print("Average price:", average)
