@@ -1,14 +1,11 @@
 import sys
 
-# Check if exactly 3 command-line arguments are given
-if len(sys.argv) == 4:
-    prices = [float(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3])]
+# If user does NOT give 3 parameters → use default values
+if len(sys.argv) != 4:
+    print("No proper parameters given. Using default values...")
+    prices = [10.0, 30.0, 20.0]  # Default values
 else:
-    print("No proper parameters given. Please enter values manually...")
-    prices = []
-    prices.append(float(input("Enter price1: ")))
-    prices.append(float(input("Enter price2: ")))
-    prices.append(float(input("Enter price3: ")))
+    prices = [float(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3])]
 
 minimum = min(prices)
 maximum = max(prices)
