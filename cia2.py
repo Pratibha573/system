@@ -1,16 +1,23 @@
 import sys
 
-# If user does NOT give 3 parameters → use default values
-if len(sys.argv) != 4:
-    print("No proper parameters given. Using default values...")
-    prices = [10.0, 30.0, 20.0]  # Default values
+# Check if exactly 3 command-line arguments are passed (script name + 3 values = length 4)
+if len(sys.argv) == 4:
+    price1 = float(sys.argv[1])
+    price2 = float(sys.argv[2])
+    price3 = float(sys.argv[3])
 else:
-    prices = [float(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3])]
+    print("No proper parameters given. Using default values...")
+    price1 = 10
+    price2 = 30
+    price3 = 20.00
 
-minimum = min(prices)
-maximum = max(prices)
-average = sum(prices) / len(prices)
+# Calculations
+maximum = max(price1, price2, price3)
+minimum = min(price1, price2, price3)
+average = (price1 + price2 + price3) / 3
 
-print("Minimum price:", minimum)
-print("Maximum price:", maximum)
-print("Average price:", average)
+# Output
+print("Prices:", price1, price2, price3)
+print("Maximum Price =", maximum)
+print("Minimum Price =", minimum)
+print("Average Price =", average)
